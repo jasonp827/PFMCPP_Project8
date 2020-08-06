@@ -22,6 +22,6 @@ void Motorcycle::setSpeed(int s)
     }
     else
     {
-        Vehicle::setSpeed(s);
+        Motorcycle::setSpeed(s);
     }
 }

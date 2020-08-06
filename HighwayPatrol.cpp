@@ -1,5 +1,9 @@
-#include "HighwayPatrol.h"
 #include <iostream>
+#include "HighwayPatrol.h"
+#include "Highway.h"
+#include "Car.h"
+#include "SemiTruck.h"
+#include "Motorcycle.h"
 
 HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
 {
@@ -28,7 +32,7 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
     if( willArrest )
     {
         //print the vehicle type in this std::cout between "THE [" and "] PULL". 
-        std::cout << name << ": YOU IN THE [ " << " ] PULL OVER AND SHOW YOUR HANDS" << std::endl;
+        std::cout << name << ": YOU IN THE [ " <<  <<  " ] PULL OVER AND SHOW YOUR HANDS" << std::endl;
         std::cout << "EVERYONE ELSE, SLOW DOWN!! \n\n\n";
         h->removeVehicle(v);
     }
