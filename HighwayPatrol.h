@@ -1,7 +1,9 @@
 #pragma once 
-#include "Vehicle.h"
-#include "Highway.h";
 
+#include "Vehicle.h"
+#include "Highway.h"
+
+struct Highway;
 struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();

@@ -2,6 +2,8 @@
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n){}
 
+SemiTruck::~SemiTruck(){}
+
 void SemiTruck::driveSafely()
 {
     setSpeed(50);

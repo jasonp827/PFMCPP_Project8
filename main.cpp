@@ -105,6 +105,8 @@ int main()
      reserve how ever many cars, motorcycles, and trucks you'll create first
      */
     cars.reserve(3); //reserving room for 3 Car instances
+    motorcycles.reserve(2);
+    trucks.reserve(1);
     
     /*
      Now that we have reserved space for our UDT instances inside the vector, we can construct them in-place inside the vector.
@@ -117,15 +119,31 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    
+    cars.emplace_back("Ford");
+    cars.emplace_back("Mercedes");
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
-    
-    
-    
-    
-    assert(false);
+
+     motorcycles.emplace_back("Ducati");
+     motorcycles.emplace_back("Harley Davidson");
+
+     trucks.emplace_back("SemiTruck");
+
+    for(Car& car : cars)
+    {
+        highway.addVehicle(&car);
+    }
+
+    for(Motorcycle& mc : motorcycles)
+    {
+        highway.addVehicle(&mc);
+    }
+
+    for(SemiTruck& st : trucks)
+    {
+        highway.addVehicle(&st);
+    }
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
     
