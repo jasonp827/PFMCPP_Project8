@@ -2,7 +2,10 @@
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n){}
 
-SemiTruck::~SemiTruck(){}
+void SemiTruck::tryToEvade()
+{
+    setSpeed(0);
+}
 
 void SemiTruck::driveSafely()
 {
@@ -12,7 +15,7 @@ void SemiTruck::driveSafely()
 
 void SemiTruck::pullOver()
 {
-    setSpeed(0);
+    tryToEvade();
     std::cout<< "Oh god.\n" << std::endl;
 }
 
