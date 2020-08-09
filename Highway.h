@@ -2,8 +2,6 @@
 
 #include <vector>
 #include <algorithm>
-#include "Vehicle.h"
-#include "HighwayPatrol.h"
 
 struct Vehicle;
 struct HighwayPatrol;

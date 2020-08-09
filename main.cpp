@@ -119,28 +119,28 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    cars.emplace_back("Ford");
-    cars.emplace_back("Mercedes");
+    cars.emplace_back("Pickle");
+    cars.emplace_back("Prickle");
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
 
-     motorcycles.emplace_back("Ducati");
-     motorcycles.emplace_back("Harley Davidson");
+     motorcycles.emplace_back("Tickle");
+     motorcycles.emplace_back("Sickle");
 
-     trucks.emplace_back("SemiTruck");
+     trucks.emplace_back("Stitchell");
 
-    for(Car& car : cars)
+    for(auto& car : cars)
     {
         highway.addVehicle(&car);
     }
 
-    for(Motorcycle& mc : motorcycles)
+    for(auto& mc : motorcycles)
     {
         highway.addVehicle(&mc);
     }
 
-    for(SemiTruck& st : trucks)
+    for(auto& st : trucks)
     {
         highway.addVehicle(&st);
     }

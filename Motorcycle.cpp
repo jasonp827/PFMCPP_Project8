@@ -2,6 +2,9 @@
 
 Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
+Motorcycle::~Motorcycle() = default;
+Motorcycle::Motorcycle(const Motorcycle&) = default;
+Motorcycle& Motorcycle::operator=(const Motorcycle&) = default;
 
 void Motorcycle::lanesplitAndRace( int topSpeed )
 {
@@ -18,7 +21,6 @@ void Motorcycle::setSpeed(int s)
 {
     if( s < 90 )
     {
-        Vehicle::setSpeed(110);
         //ignore the request to lower the speed
         std::cout<< name << ": uh, no.  i'm currently lane-splitting and racing" << std::endl;
 
